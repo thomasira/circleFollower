@@ -1,0 +1,16 @@
+
+Le projet:
+    gestionnaire d'év. qui suit la souris. a chaque mousedown(clic), un cercle de couleur aléatoire apparait en transition(small to big). Il disparait(big to small) au mouseup.
+
+Stratégie:
+    HTML: dans le body, créer un div dans un div(parent).
+
+    CSS: le body est en position relative et à une hauteur min de 100vh. le div parent, en position absolute.
+
+        le div parent recoit un aspect ratio 1/1, et grâce a un display flex, aligne son enfant au centre.
+
+        l'enfant est à 0px de largeur, avec un border radius à 100%(pourrait être autre mais jaime 100) et quelques transitions durations.
+
+    JS: Utiliser les coordonnées de la souris pour placer le div parent dans la page. Le div parent suivra la position de la souris, et à chaque clic sur celui-ci, le cercle apparaitra en changeant les styles de son enfant.
+
+plus de détails dans les fichiers ./assets/script/main.js et ./assets/ctyles/main.css

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden; /* pour ne pas avoir de scroll dans le cas ou le cercle sort du body*/
+    position: relative;
+    background-color: slategrey;
+    min-height: 100vh;  /*pour être sur d'écouter qqchose*/
+}
+[data-js-circle]{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio:1/1; /*pour ne pas avoir à déclarer le height en plus du width en JS*/
+}
+
+[data-js-circle]>div{
+    width: 0px;
+    aspect-ratio:1/1;
+    border-radius: 100%;
+    transition-duration: 2s, 2s;                
+    transition-property:background-color, width;
+
+    /*transition-duration peut être conjointe de transition-property. Le paramètre de l'un affecte l'autre, dans l'ordre d'écriture.
+    ici, la couleur change en 1s et la largeur en 2s.
+    */
+
+}
